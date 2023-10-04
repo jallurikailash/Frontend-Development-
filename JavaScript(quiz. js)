@@ -1,0 +1,18 @@
+// JavaScript Functionality
+const submitBtn = document.getElementById('submit-btn');
+const result = document.getElementById('result');
+
+submitBtn.addEventListener('click', function () {
+    const selectedOption = document.querySelector('input[name="q1"]:checked');
+
+    if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        if (userAnswer === "paris") {
+            result.textContent = "Correct!";
+        } else {
+            result.textContent = "Incorrect. The correct answer is Paris.";
+        }
+    } else {
+        result.textContent = "Please select an answer.";
+    }
+});
